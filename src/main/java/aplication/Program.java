@@ -18,7 +18,7 @@ public class Program {
         }
         //remover elementos
         System.out.println("---------------------");
-        //reova elemento q começa com a letra m
+        //reova elemento por predicado q começa com a letra m
         list.removeIf(x -> x.charAt(0) == 'M');
         for (String x : list) {
             System.out.println(x);
@@ -28,6 +28,7 @@ public class Program {
         System.out.println("Index of Bob: " + list.indexOf("Bob"));
         System.out.println("Index of Marco: " + list.indexOf("Marco"));
         System.out.println("---------------------");
+        //criar nova lista apartir de elementos de outra lista que cumpram determinado padão
         List<String> result = list.stream().filter(x -> x.charAt(0) == 'A').collect(Collectors.toList());
         for (String x : result) {
             System.out.println(x);
